@@ -1,3 +1,5 @@
-FROM azul/zulu-openjdk:11
+FROM jetbrains/teamcity-agent
 
-RUN apt update && apt install graphviz
+COPY run-agent-relocate.sh /services/run-agent-relocate.sh
+
+CMD /run-services.sh
